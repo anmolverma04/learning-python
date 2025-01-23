@@ -1,6 +1,15 @@
+def dice_roller():
+    import random
+    return random.randint(1, 6)
+dice_roller()
 
-a = int(input("Enter the time of fixed deposit "))
-b = float(input("Enter the principal amount "))
-c = float(input("Enter the annual interest rate "))
-simple_interest = b * c * a / 100
-print(f"The simple interest for {a} years at a rate of {c}% is:",simple_interest)
+def play_game():
+    print("Welcome to the dice roller game!")
+    print("You rolled a", dice_roller())
+    print("Do you want to roll again? (yes/no)")
+    answer = input()
+    if answer == "yes":
+        play_game()
+    else:
+        print("Goodbye!")
+        play_game()
